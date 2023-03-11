@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "wasm";
+  src: url(../assets/fonts/Wasm-Font-Normal-Light.ttf) format("truetype");
+}
+:root {
+  --color-primary: #2489b0;
+}
+.section1-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.bg-white-shapes {
+  background-image: url("../assets/images/bg-shapes.jpg");
+}
+.section2-img1 {
+  border-radius: 1rem;
+  border: 1px solid var(--color-primary);
+}
+.section2-img2 {
+  border-radius: 1rem;
+  border: 1px solid var(--color-primary);
+}
