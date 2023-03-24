@@ -4,6 +4,8 @@ import { createTheme, GlobalStyles, ThemeProvider, createMuiTheme } from "@mui/m
 import CssBaseline from '@mui/material/CssBaseline';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';
+// style
+import '../style/main.css';
 import createCache from '@emotion/cache';
 document.dir = 'rtl';
 const cssVar = (name: string) =>
@@ -18,24 +20,18 @@ export default function RootLayout({
 }) {
   const [theme, setTheme] = useState(
     createTheme({
+      palette: {
+        primary: {
+          main: "#2489b0"
+        }
+      },
+      direction: 'rtl',
+      typography: {
+        fontFamily: 'wasm, Raleway, Arial',
+      }
     })
   );
 
-  useLayoutEffect(() => {
-    setTheme(
-      createTheme({
-        palette: {
-          primary: {
-            main: cssVar("--color-primary")
-          }
-        },
-        direction: 'rtl',
-        typography: {
-          fontFamily: 'wasm, Raleway, Arial',
-        }
-      })
-    );
-  }, []);
   // Create rtl cache
   const cacheRtl = createCache({
     key: 'muirtl',

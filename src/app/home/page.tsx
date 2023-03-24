@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <HomePageSection1 />
-      <HomePageSection2 />
+      {/* <HomePageSection2 /> */}
       <HomePageSection3 />
       <HomePageSection4 />
       <HomePageSection5 />
